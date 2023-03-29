@@ -2,9 +2,11 @@ package com.example.assesmentmopro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.android.material.switchmaterial.SwitchMaterial
 import java.util.*
 import kotlin.collections.ArrayList
 
@@ -14,12 +16,25 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dataList: ArrayList<DataClass>
     lateinit var imageList:Array<Int>
     lateinit var titleList:Array<String>
+
     // disini kita membuat variable untuk searchview dan arraylist untuk menyimpan data yang dicari
     private lateinit var searchView: SearchView
     private lateinit var searchList: ArrayList<DataClass>
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // disini kita membuat variable untuk switch material
+        val switchMaterial = findViewById<SwitchMaterial>(R.id.switch_material)
+
+        switchMaterial.setOnCheckedChangeListener(){ buttonView, isChecked ->
+            if (isChecked) {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+            } else {
+                AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+            }
+        }
 
 //        kumpulan gambar
         imageList = arrayOf(
