@@ -43,8 +43,8 @@ class MainActivity : AppCompatActivity() {
             R.drawable.pr,
             R.drawable.an,
             R.drawable.ae,
-            R.drawable.id,
             R.drawable.ai,
+            R.drawable.id,
             R.drawable.xd,
             R.drawable.fg
         )
