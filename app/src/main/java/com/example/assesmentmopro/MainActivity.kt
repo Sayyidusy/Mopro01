@@ -16,6 +16,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var dataList: ArrayList<DataClass>
     private lateinit var imageList:Array<Int>
     private lateinit var titleList:Array<String>
+    private lateinit var descList:Array<String>
     private lateinit var searchList: ArrayList<DataClass>
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -59,6 +60,21 @@ class MainActivity : AppCompatActivity() {
             "Adobe InDesign",
             "Adobe XD",
             "Figma"
+        )
+
+
+        //dekripsi aplikasi
+        descList = arrayOf(
+            "Adobe Photoshop adalah perangkat lunak pengeditan foto dan grafis yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe Lightroom adalah perangkat lunak pengeditan foto dan grafis yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe Photoshop Camera adalah aplikasi kamera yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe Premiere Rush adalah aplikasi pengeditan video yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe Animate adalah aplikasi pengeditan video yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe After Effects adalah aplikasi pengeditan video yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe Illustrator adalah aplikasi pengeditan video yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe InDesign adalah aplikasi pengeditan video yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Adobe XD adalah aplikasi pengeditan video yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter.",
+            "Figma adalah aplikasi pengeditan video yang dikembangkan oleh Adobe Systems. Program ini memungkinkan penggunanya untuk mengedit, memanipulasi, dan memperbaiki foto dan gambar digital dengan berbagai alat seperti pensil, kuas, dan filter."
         )
 
         // inisialisasi recyclerview dan mengatur layout manager dan ukuran recyclerview
@@ -108,7 +124,7 @@ class MainActivity : AppCompatActivity() {
     //   fungsi getData untuk mengambil data dari arraylist dan mengirimkannya ke adapter
     private fun getData() {
         for (i in imageList.indices) {
-            val dataClass = DataClass(imageList[i], titleList[i])
+            val dataClass = DataClass(imageList[i], titleList[i], descList[i])
             dataList.add(dataClass)
         }
         // Mengirimkan data ke AdapterClass dengan parameter searchList yang sudah diinisialisasi pada OnCreate
