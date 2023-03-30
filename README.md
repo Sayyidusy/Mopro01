@@ -1,5 +1,6 @@
 DAFTAR APLIKASI EDITING, ASSESMENT 01 MOBILE PROGRAMMING 
-![Frame 29](https://user-images.githubusercontent.com/88390553/228691996-afc76fc7-746b-4f67-a475-8d27349b9ec0.png)
+![Frame 29 (1)](https://user-images.githubusercontent.com/88390553/228907464-8e78223a-9dda-4909-b935-dfe41359364a.png)
+
 
 FITUR PADA APLIKASI =
 - Search Bar
