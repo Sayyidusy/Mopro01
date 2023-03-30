@@ -7,6 +7,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_margin="12dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/search"
+        tools:layout_editor_absoluteX="12dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/blue"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/titleCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Halo Sayyidusy"
+                android:textSize="30sp"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp">
+            </TextView>
+
+            <TextView
+                android:id="@+id/descCard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Selamat datang di artikel aplikasi \nediting foto, video, animasi dll"
+                android:layout_below="@+id/titleCard"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:textColor="@color/white">
+            </TextView>
+
+            <ImageView
+                android:id="@+id/imageCard"
+                android:layout_width="120dp"
+                android:layout_height="100dp"
+                android:maxHeight="100dp"
+                android:src="@drawable/dadah"
+                android:layout_alignParentRight="true"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
     <androidx.appcompat.widget.SearchView
         android:id="@+id/search"
         android:layout_width="0dp"
@@ -18,7 +70,7 @@
         app:iconifiedByDefault="false"
         app:layout_constraintEnd_toStartOf="@+id/switch_material"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:queryHint="Cari Aplikasi Disini.."
         app:searchHintIcon="@null"
         app:searchIcon="@drawable/baseline_search_24" />

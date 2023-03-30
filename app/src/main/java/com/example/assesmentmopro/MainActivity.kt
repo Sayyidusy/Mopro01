@@ -19,10 +19,18 @@ class MainActivity : AppCompatActivity() {
     private lateinit var descList:Array<String>
     private lateinit var searchList: ArrayList<DataClass>
 
+    companion object{
+        const val NAME = "NAME"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        //
+        val name = intent.getStringExtra(NAME)
+        binding.titleCard.text = "Hello" + " " + name
 
         // disini kita membuat variable untuk switch material
         val switchMaterial = binding.switchMaterial
